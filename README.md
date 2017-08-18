@@ -2,13 +2,9 @@
 
 (c) 2017 by Thomas Lidy, TU Wien - http://ifs.tuwien.ac.at/~lidy
 
-This is a set of tutorials showing how to use <b>Deep learning algorithms</b> for music analysis and retrieval problems.
+Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning atau ataupun music information retrieval dapat menggunakanannya.
 
-It uses Python 2.7 as the programming language with the popular [Keras] (https://keras.io/) and [Theano](http://deeplearning.net/software/theano/) Deep Learning libraries underneath.
-
-# Tutorials
-
-For the tutorials, we use iPython / Jupyter notebook, which allows to program and execute Python code interactively in the browser.
+Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook yang mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser sebagai IDE.
 
 ### Viewing Only
 
@@ -87,7 +83,7 @@ sudo pip install -r requirements.txt
 If you want to use audio formats other than .wav files (e.g. .mp3, .flac, .au, .mp4), you have to install FFMPEG on you computer:
 
 - Linux: install `ffmpeg`, via `sudo apt-get install ffmpeg`)
-  - for Ubuntu 14.04: see http://fcorti.com/2014/04/22/ffmpeg-ubuntu-14-04-lts
+  - Untuk Ubuntu 14.04 dan 16.04, baca link berikut: https://askubuntu.com/questions/699502/ffmpeg-command-not-found
 - Mac: download FFMPeg for Mac: http://ffmpegmac.net or if you use brew, execute: `brew install ffmpeg`
 - Windows: download FFMpeg.exe from https://github.com/tuwien-musicir/rp_extract/blob/master/bin/external/win/ffmpeg.exe
 
