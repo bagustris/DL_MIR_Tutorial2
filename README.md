@@ -1,14 +1,15 @@
 # Tutorial: Deep Learning on Music Information Retrieval
 
 (c) 2017 by Thomas Lidy, TU Wien - http://ifs.tuwien.ac.at/~lidy
-Forked from http://github.com/tuwien-musicir/DL_MIR_Tutorial
+
+[bagustris](@bagustris) forked this repo from http://github.com/tuwien-musicir/DL_MIR_Tutorial and updated freely in Indonesian language.
 
 Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning atau ataupun music information retrieval dapat menggunakanannya.
 
 Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook yang mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser sebagai IDE.
 
 ### Viewing Only
-Jika anda hanya ingin melihat saja (artinya anda tida (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut,https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
+Jika anda hanya ingin melihat saja (artinya anda tida (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut, https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
 
 ### Interactive Coding
 
