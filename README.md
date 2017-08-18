@@ -2,7 +2,7 @@
 
 (c) 2017 by Thomas Lidy, TU Wien - http://ifs.tuwien.ac.at/~lidy
 
-[bagustris](@bagustris) forked this repo from http://github.com/tuwien-musicir/DL_MIR_Tutorial and updated freely in Indonesian language.
+[bagustris](https://github.com/bagustris) forked this repo from http://github.com/tuwien-musicir/DL_MIR_Tutorial and updated freely in Indonesian language.
 
 Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning atau ataupun music information retrieval dapat menggunakanannya.
 
