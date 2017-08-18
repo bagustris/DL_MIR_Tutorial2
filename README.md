@@ -14,8 +14,10 @@ Jika anda hanya ingin melihat saja (artinya anda tida (ingin) mengeksekusi skrip
 
 Jika anda ingin mengikuti tutorial ini secara komprenhensif (dengan kata lain: anda ingin belajar sungguh-sungguh), anda harus menginstall program berikut dengan versi yang sama persis dengan yang dibutuhkan. Menginstall versi dari librari yang lebih tinggi atau lebih rendah menyebabkan program gagal berjalan. Tujuan dari tutorial ini adalah untuk membuktikan bahwa untuk memahami cara kerja deeplearning dan implementasinya untuk klasifikasi genre musik. Jadi, pada step awal tutorial ini, kita harus memastikan bahwa program yang dirancang **just works**. Selanjutnya anda bisa memodifikasi sendiri bila telah berhasil menjalankan program deeplearning pada tutorial ini.
 
+# Step by step
 Langkah-langkah menjalakan program deeplearning python (keras berbasis theano) pada tutorial ini:
-1. Clone repository ini
+1. Clone repository ini,
+`git clone https://github.com/bagustris/DL_MIR_Tutorial2.git`
 2. Install [program/library/module yang dibutuhkan](#installation-of-pre-requisites)
 3. Pindah direktori pada DL_MIR_Tutorial2 (hasil clone)
 3. Jalankan ipython atau jupyter notebook sbb:
@@ -24,56 +26,46 @@ Langkah-langkah menjalakan program deeplearning python (keras berbasis theano) p
 5. Jalankan tiap baris file Music_genre_classification2.ipynb tersebut hingga hasilnya sama atau mirip dengan file Music_genre_classification.ipynb
 
 
-# Music_genre_classification.ipynb #   
-This tutorial shows how music is categorized into 1 of 10 music genres using the GTZAN music collection (see below).
-   It includes audio and data preprocessing for Deep Learning and creating and training different architectures and parameters of a Convolutional Neural Network. It also includes techniques such as Batch Normalization, ReLU Activation and Dropout.
+# Music_genre_classification2.ipynb #   
+Ini adalah file utama kita. Jalankan tiap baris skrip python pada file tersebut (tekan Ctrl+Enter) dan lihat hasilnya. Jika tidak ada error, lanjutkan pada baris selanjutnya, jika ada error, cari errornya dimana dan perbaiki, kemudian jalankan lagi.
+Output yang diharapkan dari file tersebut adalah bagaimana mengklasifikasikan genre musik dengan deep learning berbasis python keras dan theano menggunakan teknik *Convolutional Neural Network*. Teknik deep learning yang diimplementasikan pada skrip tersebut juga mencangkup teknik *Batch Normalization, ReLU Activation dan Dropout*.
 
 
 # Installation of Pre-requisites
 
 ## Install Python 2.7
 
-Note: On most Mac and Linux systems Python is already pre-installed. Check with `python --version` on the command line whether you have Python 2.7.x installed.
+Kita menggunakan python versi 2.7, bukan versi 3(.5). Pada kebanyakan sistem Unix, yakni Linux atau Mac, python 2.7 sudah terinstall *by default*.  Silahkan cek versi python anda dengan menjalankan perintah `python --version` pada terminal Linux.
 
-Otherwise install Python 2.7 from https://www.python.org/download/releases/2.7/
+Sangat disarankan menggunakan Ubuntu 16.04 dimana tutorial ini dibuat.
+
+Jika python 2.7 belum terinstall pada sistem anda, silahkan merefer kesini: from https://www.python.org/download/releases/2.7/
 
 ## Install Python libraries:
 
 ### Mac, Linux or Windows
 
-(on Windows leave out `sudo`)
+(pada windows tanpa memakai `sudo`)
 
-```
-sudo pip install ipython
-```
-
-Try if you can open 
-```
-ipython notebook
-```
-on the command line. Otherwise try to install:
 ```
 sudo pip install jupyter
 ```
 
-Then download or clone the Tutorials from this GIT repository:
-
-```
-git clone https://github.com/tuwien-musicir/DL_MIR_Tutorial.git
-```
+Kemudian ikuti langkah pertama [di atas](#Step by step) atau download dan ekstrak dari link berikut.
 or download https://github.com/tuwien-musicir/DL_MIR_Tutorial/archive/master.zip <br/>
-unzip it and rename the folder to `DL_MIR_Tutorial`.
 
-Install the remaining Python libraries needed:
+Gani nama hasil extract tadi dengan nama baru: `DL_MIR_Tutorial2`.
 
-Either by:
+Install library python yang dibutuhkan dengan **SALAH SATU** cara berikut.
+
+Cara pertama:
 
 ```
 sudo pip install Keras==1.2.1 Theano==0.8.2 scikit-learn>=0.17 pandas librosa
 ```
 
-or, if you downloaded or cloned this repository, by:
-
+Cara kedua:
+Dari dalam folder `DL_MIR_Tutorial2`:
 ```
 cd DL_MIR_Tutorial
 sudo pip install -r requirements.txt
@@ -81,26 +73,24 @@ sudo pip install -r requirements.txt
 
 ### Install MP3 Decoder
 
-If you want to use audio formats other than .wav files (e.g. .mp3, .flac, .au, .mp4), you have to install FFMPEG on you computer:
+Karena alasan bandwidth, kita menggunakan database file musik dengan format .mp3 (umumnya format .wav yang banyak dipakai untuk proses manipulasi audio). Jadi kita harus mempunyai codec untuk mengkonversi .mp3 menjadi .wav secara **on the fly**.
 
 - Linux: install `ffmpeg`, via `sudo apt-get install ffmpeg`)
   - Untuk Ubuntu 14.04 dan 16.04, baca link berikut: https://askubuntu.com/questions/699502/ffmpeg-command-not-found
-- Mac: download FFMPeg for Mac: http://ffmpegmac.net or if you use brew, execute: `brew install ffmpeg`
-- Windows: download FFMpeg.exe from https://github.com/tuwien-musicir/rp_extract/blob/master/bin/external/win/ffmpeg.exe
+- Mac: download FFMPeg Untuk Mac: http://ffmpegmac.net jika anda menggunakan `brew` jakankan: `brew install ffmpeg`
+- Windows: download FFMpeg.exe dari https://github.com/tuwien-musicir/rp_extract/blob/master/bin/external/win/ffmpeg.exe
 
-Make sure that the exectuable is in a PATH found by the system.
+Pastikan file executable `ffmpeg` berada pada lingkup pencarian system. Secara otomatis, pada sistem Ubuntu/Linux berada pada `/usr/bin`.
 
 ## Configure Keras to use Theano
 
-Since we use Theano as the Deep Learning computation backend, but Keras is configured to use TensorFlow by default, we have to change this in the `keras.json` configuration file, which is in the `.keras` folder of the user's HOME directory.
-
-Copy the `keras.json` included in the `DL_MIR_Tutorial` to one of the following target directories (you can overwrite an existing file):
+Karena kita menggunakan Theano sebagai backend komputasi Deep Learning, namun Keras dikonfigurasi untuk menggunakan Tensor Flow *by default*, maka kita perlu mengkonfigurasi keras agar menggunakan backend Theano. Caranya adalah dengan merubah isi file `.keras/keras.json` pada HOME direktori anda (pada sistem Linux). Copy file keras.json pada direktori `DL_MIR_Tutorial2` ini pada HOME direktori anda untuk meng-overwrite file yang telah ada.
 
 * Windows: `C:\Users\<user>\.keras\`
 * Mac: `/Users/<user>/.keras`
 * Linux: `/home/<user>/.keras`
 
-An alternantive is to change these 2 lines in your `keras.json` file to the following:
+Sebagai alternatif, anda dapat merubah isi file `.keras/keras.json` pada HOME direktori anda dengan isi berikut.
 ```
 {
     "image_dim_ordering": "th",
@@ -108,17 +98,17 @@ An alternantive is to change these 2 lines in your `keras.json` file to the foll
 }
 ```
 
-See https://keras.io/backend/ for details or http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ for a step by step guide.
+Lihat https://keras.io/backend/ untuk lebih detail, atau buka http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ untuk langkah langkah panduannya..
 
 ### Optional for GPU computation
 
-If you want to train your neural networks on your GPU, also install the following (not needed for the tutorials):
+Jika anda ingin menggunakan GPU (graphical processing unit) untuk komputasi Deep Learning, anda harus menginstall driver GPU. Lihat beberapa link berikut.
 
 * [NVidia drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us)
 * [CUDA](https://developer.nvidia.com/cuda-downloads)
 * [cuDNN](https://developer.nvidia.com/cudnn) (optional, for further speedup)
 
-To permanently configure Keras/Theano to use the GPU place a file `.theanorc` in your home directory with the following content:
+Konfigurasi agar Keras/Theano adalah dengan membuat file `.theanorc` dalam HOME direktori dengan isi sebagai berikut:
 
 ```
 [global]
@@ -129,28 +119,29 @@ mode=FAST_RUN
 
 ### Check if installed correctly
 
-To check whether Python, Keras and Theano were installed correctly, do:
-
+Untuk mengecek apakan keras telah terkonfigurasi dengan theano jalankan perintah berikut pada terminal
 `
 python test_keras.py
 `
 
-If everything is installed correctly, it should print `Using Theano backend.`<br/>
-If the GPU is configured correctly, it should also print `Using gpu device 0: GeForce GTX 980 Ti` or similar.
+Atau ketik `python` pada terminal dan isikan `import keras` pada konsol python.
+
+Jika muncul `Using Theano backend`, artinya keras telah konfigurasi. Jika muncul error, carilah erronya dimana.
+Jika dikonfigurasi menggunakan GPU maka akan muncul `Using gpu device 0: GeForce GTX 980 Ti` atau sejenisnya.
 
 
 # Source Credits
 
 ## Python libraries
 
-The following helper Python libraries are used in these tutorials:
+Beberapa library python yang digunakan pada tutorial ini.
 
 * `audiofile_read.py` and `rp_extract.py`: by Thomas Lidy and Alexander Schindler, taken from the [RP_extract](https://github.com/tuwien-musicir/rp_extract) git repository
 * `wavio.py`: by Warren Weckesser
 
 ## Data Sources
 
-The data sets we use in the tutorials are from the following sources:
+Dataset (file mp3) diambil dari link dipaling bawah halaman ini. Ekstrak data file tersebut dan letakkan pada folder `data` yang letakknya sejajar dengan folder `DL_MIR_Tutorial2`.
 
 * GTZAN music genre data set:
 by George Tzanetakis
