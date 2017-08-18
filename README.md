@@ -1,30 +1,31 @@
 # Tutorial: Deep Learning on Music Information Retrieval
 
 (c) 2017 by Thomas Lidy, TU Wien - http://ifs.tuwien.ac.at/~lidy
+Forked from http://github.com/tuwien-musicir/DL_MIR_Tutorial
 
 Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning atau ataupun music information retrieval dapat menggunakanannya.
 
 Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook yang mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser sebagai IDE.
 
 ### Viewing Only
-
-If you do not want to install anything, you can simply view the tutorials' content in your browser, by clicking on
-the tutorial's filenames listed below in the GIT file listing (above, resp. on https://github.com/tuwien-musicir/DL_MIR_Tutorial ).
-
-The tutorial will open in your browser for viewing.
+Jika anda hanya ingin melihat saja (artinya anda tida (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut,https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
 
 ### Interactive Coding
 
-If you want to follow the Tutorials by actually executing the code on your computer, please [install first the pre-requisites](#installation-of-pre-requisites) as described below.
+Jika anda ingin mengikuti tutorial ini secara komprenhensif (dengan kata lain: anda ingin belajar sungguh-sungguh), anda harus menginstall program berikut dengan versi yang sama persis dengan yang dibutuhkan. Menginstall versi dari librari yang lebih tinggi atau lebih rendah menyebabkan program gagal berjalan. Tujuan dari tutorial ini adalah untuk membuktikan bahwa untuk memahami cara kerja deeplearning dan implementasinya untuk klasifikasi genre musik. Jadi, pada step awal tutorial ini, kita harus memastikan bahwa program yang dirancang **just works**. Selanjutnya anda bisa memodifikasi sendiri bila telah berhasil menjalankan program deeplearning pada tutorial ini.
 
-After that, to run the tutorials go into the `DL_MIR_Tutorial` folder and start from the command line:
-
+Langkah-langkah menjalakan program deeplearning python (keras berbasis theano) pada tutorial ini:
+1. Clone repository ini
+2. Install [program/library/module yang dibutuhkan](#installation-of-pre-requisites)
+3. Pindah direktori pada DL_MIR_Tutorial2 (hasil clone)
+3. Jalankan ipython atau jupyter notebook sbb:
 `ipython notebook` or `jupyter notebook`
+4. Buka file Music_genre_classification2.ipynb
+5. Jalankan tiap baris file Music_genre_classification2.ipynb tersebut hingga hasilnya sama atau mirip dengan file Music_genre_classification.ipynb
 
-Your web browser will open showing a list of files. Start the tutorials one after another by clicking on the following:
 
-<b>Music_genre_classification.ipynb</b><br/>
-   This tutorial shows how music is categorized into 1 of 10 music genres using the GTZAN music collection (see below).
+# Music_genre_classification.ipynb #   
+This tutorial shows how music is categorized into 1 of 10 music genres using the GTZAN music collection (see below).
    It includes audio and data preprocessing for Deep Learning and creating and training different architectures and parameters of a Convolutional Neural Network. It also includes techniques such as Batch Normalization, ReLU Activation and Dropout.
 
 
