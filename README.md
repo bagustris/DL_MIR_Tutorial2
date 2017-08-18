@@ -4,6 +4,8 @@
 
 [bagustris](https://github.com/bagustris) forked this repo from http://github.com/tuwien-musicir/DL_MIR_Tutorial and updated freely in Indonesian language.
 
+
+---
 Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning atau ataupun music information retrieval dapat menggunakanannya.
 
 Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook yang mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser sebagai IDE.
