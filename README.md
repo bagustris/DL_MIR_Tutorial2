@@ -41,7 +41,8 @@ Kita menggunakan python versi 2.7, bukan versi 3(.5). Pada kebanyakan sistem Uni
 
 Sangat disarankan menggunakan Ubuntu 16.04 dimana tutorial ini dibuat.
 
-Jika python 2.7 belum terinstall pada sistem anda, silahkan merefer kesini: from https://www.python.org/download/releases/2.7/
+Jika python 2.7 belum terinstall pada sistem anda, silahkan merefer kesini:
+https://www.python.org/download/releases/2.7/
 
 ## Install Python libraries:
 
