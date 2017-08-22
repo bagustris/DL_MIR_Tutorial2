@@ -51,7 +51,7 @@ https://www.python.org/download/releases/2.7/
 (pada windows tanpa memakai `sudo`)
 
 ```
-sudo pip install jupyter
+sudo -H pip install jupyter
 ```
 
 Kemudian ikuti langkah pertama [di atas](#Step by step) atau download dan ekstrak dari link berikut.
