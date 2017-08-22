@@ -6,9 +6,9 @@
 
 
 ---
-Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning atau ataupun music information retrieval dapat menggunakanannya.
+Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: music information retrieval. Anda yang ingin belajar deep learning ataupun music information retrieval dapat menggunakanannya.
 
-Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook yang mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser sebagai IDE.
+Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook di mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser layaknya IDE (integrated development editor).
 
 ### Viewing Only
 Jika anda hanya ingin melihat saja (artinya anda tida (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut, https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
@@ -29,7 +29,7 @@ Langkah-langkah menjalakan program deeplearning python (keras berbasis theano) p
 5. Jalankan tiap baris file Music_genre_classification2.ipynb tersebut hingga hasilnya sama atau mirip dengan file Music_genre_classification.ipynb
 
 
-# Music_genre_classification2.ipynb #   
+# Music_genre_classification2.ipynb 
 Ini adalah file utama kita. Jalankan tiap baris skrip python pada file tersebut (tekan Ctrl+Enter) dan lihat hasilnya. Jika tidak ada error, lanjutkan pada baris selanjutnya, jika ada error, cari errornya dimana dan perbaiki, kemudian jalankan lagi.
 Output yang diharapkan dari file tersebut adalah bagaimana mengklasifikasikan genre musik dengan deep learning berbasis python keras dan theano menggunakan teknik *Convolutional Neural Network*. Teknik deep learning yang diimplementasikan pada skrip tersebut juga mencangkup teknik *Batch Normalization, ReLU Activation dan Dropout*.
 
@@ -37,7 +37,6 @@ Output yang diharapkan dari file tersebut adalah bagaimana mengklasifikasikan ge
 # Installation of Pre-requisites
 
 ## Install Python 2.7
-
 Kita menggunakan python versi 2.7, bukan versi 3(.5). Pada kebanyakan sistem Unix, yakni Linux atau Mac, python 2.7 sudah terinstall *by default*.  Silahkan cek versi python anda dengan menjalankan perintah `python --version` pada terminal Linux.
 
 Sangat disarankan menggunakan Ubuntu 16.04 dimana tutorial ini dibuat.
@@ -64,15 +63,16 @@ Install library python yang dibutuhkan dengan **SALAH SATU** cara berikut.
 Cara pertama:
 
 ```
-sudo pip install Keras==1.2.1 Theano==0.8.2 scikit-learn>=0.17 pandas librosa
+sudo -H pip install Keras==1.2.1 Theano==0.8.2 scikit-learn>=0.17 pandas librosa
 ```
 
 Cara kedua:
 Dari dalam folder `DL_MIR_Tutorial2`:
 ```
 cd DL_MIR_Tutorial
-sudo pip install -r requirements.txt
+sudo -H pip install -r requirements.txt
 ```
+Perhatikan versi library yang diinstall untuk tutorial ini, kesalahan versi saat menginstall library akan menyebabkan program pada tutorial ini tidak bisa diinstall.
 
 ### Install MP3 Decoder
 
