@@ -11,15 +11,15 @@ Tutorial ini merupakan demo implementasi deep learning untuk permasalahan mir: m
 Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook di mana kita bisa memprogram dan mengeksekusi skrip python secara interaktif menggunakan web browser layaknya IDE (integrated development editor).
 
 ### Viewing Only
-Jika anda hanya ingin melihat saja (artinya anda tida (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut, https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
+Jika anda hanya ingin melihat saja (artinya anda tidak (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut, https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
 
 ### Interactive Coding
 
 Jika anda ingin mengikuti tutorial ini secara komprenhensif (dengan kata lain: anda ingin belajar sungguh-sungguh), anda harus menginstall program berikut dengan versi yang sama persis dengan yang dibutuhkan. Menginstall versi dari librari yang lebih tinggi atau lebih rendah menyebabkan program gagal berjalan. Tujuan dari tutorial ini adalah untuk membuktikan bahwa untuk memahami cara kerja deeplearning dan implementasinya untuk klasifikasi genre musik. Jadi, pada step awal tutorial ini, kita harus memastikan bahwa program yang dirancang **just works**. Selanjutnya anda bisa memodifikasi sendiri bila telah berhasil menjalankan program deeplearning pada tutorial ini.
 
-# Step by step
+### Step by step
 Langkah-langkah menjalakan program deeplearning python (keras berbasis theano) pada tutorial ini:
-1. Clone repository ini,
+1. Clone repository ini (atau dowload zip-nya),
 `git clone https://github.com/bagustris/DL_MIR_Tutorial2.git`
 2. Install [program/library/module yang dibutuhkan](#installation-of-pre-requisites)
 3. Pindah direktori pada DL_MIR_Tutorial2 (hasil clone)
@@ -29,14 +29,15 @@ Langkah-langkah menjalakan program deeplearning python (keras berbasis theano) p
 5. Jalankan tiap baris file Music_genre_classification2.ipynb tersebut hingga hasilnya sama atau mirip dengan file Music_genre_classification.ipynb
 
 
-# Music_genre_classification2.ipynb 
+### Music_genre_classification2.ipynb 
 Ini adalah file utama kita. Jalankan tiap baris skrip python pada file tersebut (tekan Ctrl+Enter) dan lihat hasilnya. Jika tidak ada error, lanjutkan pada baris selanjutnya, jika ada error, cari errornya dimana dan perbaiki, kemudian jalankan lagi.
+
 Output yang diharapkan dari file tersebut adalah bagaimana mengklasifikasikan genre musik dengan deep learning berbasis python keras dan theano menggunakan teknik *Convolutional Neural Network*. Teknik deep learning yang diimplementasikan pada skrip tersebut juga mencangkup teknik *Batch Normalization, ReLU Activation dan Dropout*.
 
 
-# Installation of Pre-requisites
+## Installation of Pre-requisites
 
-## Install Python 2.7
+### Install Python 2.7
 Kita menggunakan python versi 2.7, bukan versi 3(.5). Pada kebanyakan sistem Unix, yakni Linux atau Mac, python 2.7 sudah terinstall *by default*.  Silahkan cek versi python anda dengan menjalankan perintah `python --version` pada terminal Linux.
 
 Sangat disarankan menggunakan Ubuntu 16.04 dimana tutorial ini dibuat.
@@ -44,9 +45,9 @@ Sangat disarankan menggunakan Ubuntu 16.04 dimana tutorial ini dibuat.
 Jika python 2.7 belum terinstall pada sistem anda, silahkan merefer kesini:
 https://www.python.org/download/releases/2.7/
 
-## Install Python libraries:
+### Install Python libraries:
 
-### Mac, Linux or Windows
+#### Mac, Linux or Windows
 
 (pada windows tanpa memakai `sudo`)
 
@@ -86,7 +87,7 @@ Karena alasan bandwidth, kita menggunakan database file musik dengan format .mp3
 
 Pastikan file executable `ffmpeg` berada pada lingkup pencarian system. Secara otomatis, pada sistem Ubuntu/Linux berada pada `/usr/bin`.
 
-## Configure Keras to use Theano
+### Configure Keras to use Theano
 
 Karena kita menggunakan Theano sebagai backend komputasi Deep Learning, namun Keras dikonfigurasi untuk menggunakan Tensor Flow *by default*, maka kita perlu mengkonfigurasi keras agar menggunakan backend Theano. Caranya adalah dengan merubah isi file `.keras/keras.json` pada HOME direktori anda (pada sistem Linux). Copy file keras.json pada direktori `DL_MIR_Tutorial2` ini pada HOME direktori anda untuk meng-overwrite file yang telah ada.
 
@@ -134,18 +135,18 @@ Jika muncul `Using Theano backend`, artinya keras telah konfigurasi. Jika muncul
 Jika dikonfigurasi menggunakan GPU maka akan muncul `Using gpu device 0: GeForce GTX 980 Ti` atau sejenisnya.
 
 
-# Source Credits
+## Source Credits
 
-## Python libraries
+### Python libraries
 
 Beberapa library python yang digunakan pada tutorial ini.
 
 * `audiofile_read.py` and `rp_extract.py`: by Thomas Lidy and Alexander Schindler, taken from the [RP_extract](https://github.com/tuwien-musicir/rp_extract) git repository
 * `wavio.py`: by Warren Weckesser
 
-## Data Sources
+### Data Sources
 
-Dataset (file mp3) diambil dari link dipaling bawah halaman ini. Ekstrak data file tersebut dan letakkan pada folder `data` yang letakknya sejajar dengan folder `DL_MIR_Tutorial2`.
+Dataset (file mp3) diambil dari link paling bawah halaman ini. Ekstrak data file tersebut dan letakkan pada folder `data` yang letaknya **sejajar** dengan folder `DL_MIR_Tutorial2`. Selamat mencoba, jika menemui kesulitan [silahkan bertanya](https://github.com/bagustris/DL_MIR_Tutorial2/issues).
 
 * GTZAN music genre data set:
 by George Tzanetakis
