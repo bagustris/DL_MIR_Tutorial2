@@ -103,7 +103,7 @@ Sebagai alternatif, anda dapat merubah isi file `.keras/keras.json` pada HOME di
 }
 ```
 
-Lihat https://keras.io/backend/ untuk lebih detail, atau buka http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ untuk langkah langkah panduannya..
+Lihat https://keras.io/backend/ untuk lebih detail, atau buka http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ untuk langkah langkah panduan di Windows 10.
 
 ### Optional for GPU computation
 
