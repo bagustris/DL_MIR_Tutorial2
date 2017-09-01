@@ -71,7 +71,7 @@ sudo -H pip install Keras==1.2.1 Theano==0.8.2 scikit-learn>=0.17 pandas librosa
 Cara kedua:
 Dari dalam folder `DL_MIR_Tutorial2`:
 ```
-cd DL_MIR_Tutorial
+cd DL_MIR_Tutorial2
 sudo -H pip install -r requirements.txt
 ```
 Perhatikan versi library yang diinstall untuk tutorial ini, kesalahan versi saat menginstall library akan menyebabkan program pada tutorial ini tidak bisa diinstall.
