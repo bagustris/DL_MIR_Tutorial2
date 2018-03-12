@@ -2,7 +2,7 @@
 
 (c) 2017 by Thomas Lidy, TU Wien - http://ifs.tuwien.ac.at/~lidy
 
-[bagustris](https://github.com/bagustris) forked this repo from http://github.com/tuwien-musicir/DL_MIR_Tutorial and updated freely in Indonesian language.
+[bagustris](https://github.com/bagustris) forked this repo from http://github.com/tuwien-musicir/DL_MIR_Tutorial and updated freely in Indonesian language. Based on Indonesian School of Music Information Retrieval, August 2017.
 
 
 ---
@@ -55,10 +55,9 @@ https://www.python.org/download/releases/2.7/
 sudo -H pip install jupyter
 ```
 
-Kemudian ikuti langkah pertama [di atas](#Step by step) atau download dan ekstrak dari link berikut.
-or download https://github.com/tuwien-musicir/DL_MIR_Tutorial/archive/master.zip <br/>
+Kemudian ikuti langkah pertama [di atas](#step-by-step) atau download dan ekstrak dari link berikut: https://github.com/tuwien-musicir/DL_MIR_Tutorial/archive/master.zip <br/>
 
-Gani nama hasil extract tadi dengan nama baru: `DL_MIR_Tutorial2`.
+Ganti nama hasil extract tadi dengan nama baru: `DL_MIR_Tutorial2`.
 
 Install library python yang dibutuhkan dengan **SALAH SATU** cara berikut.
 
