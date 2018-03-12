@@ -74,7 +74,7 @@ Dari dalam folder `DL_MIR_Tutorial2`:
 cd DL_MIR_Tutorial2
 sudo -H pip install -r requirements.txt
 ```
-Perhatikan versi library yang diinstall untuk tutorial ini, kesalahan versi saat menginstall library akan menyebabkan program pada tutorial ini tidak bisa diinstall.
+Perhatikan versi library yang diinstall untuk tutorial ini, kesalahan versi saat menginstall library akan menyebabkan program pada tutorial ini tidak bisa dijalankan.
 
 ### Install MP3 Decoder
 
@@ -103,7 +103,7 @@ Sebagai alternatif, anda dapat merubah isi file `.keras/keras.json` pada HOME di
 }
 ```
 
-Lihat https://keras.io/backend/ untuk lebih detail, atau buka http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ untuk langkah langkah panduan di Windows 10.
+Lihat https://keras.io/backend/ untuk lebih detail, atau buka http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ untuk langkah langkah panduan di Windows 10 (tidak disarankan).
 
 ### Optional for GPU computation
 
