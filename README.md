@@ -81,7 +81,8 @@ Virtual env memudahkan kita untuk menginstall paket python dengan mengisolasi en
     $ virtualenv pymir
     $ source pymir/bin/activate
     $ pip2 install -r requirement.txt
-    $ ipython kernel install --user -name=pymir #install ipykernel jika belum ada
+    $ pip install ipykernel
+    $ ipython kernel install --user --name=pymir
     $ jupyter-notebook
 
 ### Install MP3 Decoder
