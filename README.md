@@ -75,6 +75,16 @@ sudo -H pip install -r requirements.txt
 ```
 Perhatikan versi library yang diinstall untuk tutorial ini, kesalahan versi saat menginstall library akan menyebabkan program pada tutorial ini tidak bisa dijalankan.
 
+#### Dengan virtualenv
+Virtual env memudahkan kita untuk menginstall paket python dengan mengisolasi environment python secara custom. Jadi instalasi python utama dan yang lain tidak terganggu. Baca tutorialnya [di sini](http://www.bagustris.tk/2017/11/tutorial-python-virtualenv.html). Dengan virtualenv, langkah-langkah di atas dapat disederhanakan menjadi berikut,
+
+    $ virtualenv pymir
+    $ source pymir/bin/activate
+    $ pip2 install -r requirement.txt
+    $ pip install ipykernel
+    $ ipython kernel install --user --name=pymir
+    $ jupyter-notebook
+
 ### Install MP3 Decoder
 
 Karena alasan bandwidth, kita menggunakan database file musik dengan format .mp3 (umumnya format .wav yang banyak dipakai untuk proses manipulasi audio). Jadi kita harus mempunyai codec untuk mengkonversi .mp3 menjadi .wav secara **on the fly**.
@@ -140,7 +150,7 @@ Jika dikonfigurasi menggunakan GPU maka akan muncul `Using gpu device 0: GeForce
 
 Beberapa library python yang digunakan pada tutorial ini.
 
-* `audiofile_read.py` and `rp_extract.py`: by Thomas Lidy and Alexander Schindler, taken from the [RP_extract](https://github.com/tuwien-musicir/rp_extract) git repository
+* `audiofile_read.py` and `rp_extract.py`: by Thomas Lidy and Alexander Schindler, diambil dari repo berikut: [RP_extract](https://github.com/tuwien-musicir/rp_extract).
 * `wavio.py`: by Warren Weckesser
 
 ### Data Sources
