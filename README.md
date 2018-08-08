@@ -13,36 +13,8 @@ Untuk tutorial ini, kita menggunakan iPython / Jupyter notebook di mana kita bis
 ### Viewing Only
 Jika anda hanya ingin melihat saja (artinya anda tidak (ingin) mengeksekusi skrip python didalam jupyter notebook, anda dapat membuka file berikut, https://github.com/bagustris/DL_MIR_Tutorial2/blob/master/Music_genre_classification.ipynb.
 
-### Struktur direktori
-Struktur direktori repositori ini kurang lebih seperi di bawah ini.
-```
-.
-├── audiofile_read.py
-├── data
-│   └── gtzan_mp3
-├── filelist_GTZAN_au_wclasses.txt
-├── filelist_GTZAN_mp3_wclasses.txt
-├── filelist_GTZAN_wav_wclasses.txt
-├── keras.json
-├── Music_genre_classification2.ipynb
-├── Music_genre_classification3.ipynb
-├── Music_genre_classification.ipynb
-├── note.md
-├── pymir
-│   ├── bin
-│   ├── include
-│   ├── lib
-│   ├── local
-│   ├── man
-│   ├── pip-selfcheck.json
-│   └── share
-├── README.md
-├── requirements.txt
-├── rp_extract.py
-└── wavio.py
-```
-
 ### Interactive Coding
+
 Jika anda ingin mengikuti tutorial ini secara komprenhensif (dengan kata lain: anda ingin belajar sungguh-sungguh), anda harus menginstall program berikut dengan versi yang sama persis dengan yang dibutuhkan. Menginstall versi dari librari yang lebih tinggi atau lebih rendah menyebabkan program gagal berjalan. Tujuan dari tutorial ini adalah untuk membuktikan bahwa untuk memahami cara kerja deeplearning dan implementasinya untuk klasifikasi genre musik. Jadi, pada step awal tutorial ini, kita harus memastikan bahwa program yang dirancang **just works**. Selanjutnya anda bisa memodifikasi sendiri bila telah berhasil menjalankan program deeplearning pada tutorial ini.
 
 ### Step by step
@@ -183,11 +155,15 @@ Beberapa library python yang digunakan pada tutorial ini.
 
 ### Data Sources
 
-Dataset (file mp3) diambil dari link paling bawah halaman ini. Ekstrak data file tersebut dan letakkan pada folder `data` di dalam direktori ini. Selamat mencoba, jika menemui kesulitan [silahkan bertanya](https://github.com/bagustris/DL_MIR_Tutorial2/issues).
+Dataset (file mp3) diambil dari link paling bawah halaman ini. Ekstrak data file tersebut dan letakkan pada folder `data` yang letaknya **sejajar** dengan folder `DL_MIR_Tutorial2`. Selamat mencoba, jika menemui kesulitan [silahkan bertanya](https://github.com/bagustris/DL_MIR_Tutorial2/issues).
 
 * GTZAN music genre data set:
 by George Tzanetakis
 1000 audio files with 30 sec. each, across 10 music genres, 100 audio files each
 
-Data sets available from:
-https://www.dropbox.com/s/8a1y2vnwih5ppaa/gtzan_mp3.7z?dl=0
+* GTZAN music speech data set: (currently not used)
+by George Tzanetakis
+Collected for the purposes of music/speech discrimination. 128 tracks, each 30 seconds long. Each class (music or speech) has 64 examples in 22050Hz Mono 16-bit WAV audio format.
+
+both data sets available from:
+http://marsyasweb.appspot.com/download/data_sets/
